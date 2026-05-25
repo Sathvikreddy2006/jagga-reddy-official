@@ -132,13 +132,41 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
-@layer base {
-  * {
-    border-color: var(--color-border);
-  }
+@theme inline {
+  --color-saffron: #ff8a1f;
+  --color-saffron-deep: #e8721a;
+  --color-india-green: #0b8a4a;
+  --color-india-green-deep: #066b39;
+  --color-ink: #0a0a0a;
+}
 
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
   body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: #fdfcf9;
+    color: #0a0a0a;
+    font-family: "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
+  h1, h2, h3, h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .tricolor-bar {
+    background: linear-gradient(90deg, #ff8a1f 0 33.33%, #ffffff 33.33% 66.66%, #0b8a4a 66.66% 100%);
+  }
+  .glass {
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border: 1px solid rgba(255,255,255,0.5);
+  }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s cubic-bezier(.22,1,.36,1); }
+  .reveal.is-visible { opacity: 1; transform: none; }
+  .ashoka-spin { animation: spin 30s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
 }
