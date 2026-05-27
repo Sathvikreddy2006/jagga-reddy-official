@@ -2,19 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import {
   Menu, X, ArrowRight, ChevronDown, Quote, Award, Users, Calendar, MapPin,
-  Mic2, Newspaper, Image as ImageIcon, Heart, HandHeart, Mail, Phone,
+  Mic2, Newspaper, Image as ImageIcon, Heart, HandHeart, Mail, Phone, Play,
   Facebook, Twitter, Instagram, Youtube, Send, PlayCircle, Download,
   GraduationCap, Sparkles, Compass, Flag, Building2, Sprout, Briefcase,
 } from "lucide-react";
 
 import portrait from "@/assets/jagga-reddy-portrait.jpg";
-import rally from "@/assets/rally.jpg";
-import speech from "@/assets/speech.jpg";
-import village from "@/assets/village.jpg";
-import inauguration from "@/assets/inauguration.jpg";
-import interview from "@/assets/interview.jpg";
-import education from "@/assets/education.jpg";
-import plantation from "@/assets/plantation.jpg";
 
 export const Route = createFileRoute("/")({ component: Index });
 
@@ -85,9 +78,8 @@ function Navbar() {
     <>
       <div className="tricolor-bar fixed top-0 inset-x-0 h-[3px] z-[60]" />
       <header
-        className={`fixed top-[3px] inset-x-0 z-50 transition-all duration-300 ${
-          solid ? "glass shadow-[0_4px_24px_-12px_rgba(0,0,0,.15)]" : "bg-transparent"
-        }`}
+        className={`fixed top-[3px] inset-x-0 z-50 transition-all duration-300 ${solid ? "glass shadow-[0_4px_24px_-12px_rgba(0,0,0,.15)]" : "bg-transparent"
+          }`}
       >
         <nav className="max-w-7xl mx-auto px-5 lg:px-10 h-16 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-2 group">
@@ -116,7 +108,7 @@ function Navbar() {
             ))}
           </ul>
 
-          <a
+          {/* <a
             href="#engage"
             className="hidden lg:inline-flex items-center gap-2 bg-[#0a0a0a] text-white text-sm font-medium px-4 py-2.5 rounded-full hover:bg-[#0b8a4a] transition-colors"
           >
@@ -129,14 +121,13 @@ function Navbar() {
             aria-label="Toggle menu"
           >
             {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          </button> */}
         </nav>
 
         {/* Mobile menu */}
         <div
-          className={`lg:hidden overflow-hidden transition-[max-height] duration-500 ease-out glass ${
-            open ? "max-h-[480px]" : "max-h-0"
-          }`}
+          className={`lg:hidden overflow-hidden transition-[max-height] duration-500 ease-out glass ${open ? "max-h-[480px]" : "max-h-0"
+            }`}
         >
           <ul className="px-6 py-6 space-y-1">
             {NAV.map((n) => (
@@ -178,7 +169,7 @@ function Hero() {
         <div className="lg:col-span-7 reveal">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs font-medium text-neutral-700 mb-7">
             <span className="w-1.5 h-1.5 rounded-full bg-[#0b8a4a] animate-pulse" />
-            Serving the people since 1998
+            Serving the people since 2004
           </div>
 
           <h1 className="text-[42px] sm:text-6xl lg:text-7xl font-bold leading-[1.02] text-neutral-900">
@@ -188,10 +179,7 @@ function Hero() {
           </h1>
 
           <p className="mt-7 text-[17px] lg:text-lg text-neutral-600 max-w-xl leading-relaxed">
-            <strong className="text-neutral-900 font-semibold">Jaya Prakash Reddy</strong>, fondly known as
-            <strong className="text-neutral-900 font-semibold"> Jagga Reddy</strong>, is a senior political
-            leader, social worker and elected representative whose two decades of grassroots service have
-            shaped a more inclusive, transparent and progressive public life.
+            <strong className="text-neutral-900 font-semibold">Turupu Jaya Prakash Reddy</strong>, popularly known as <strong className="text-neutral-900 font-semibold"> Jagga Reddy</strong>, is an Indian politician who is the Working President of Telangana Pradesh Congress Committee since 28 June 2021. He was a member of the Telangana Legislative Assembly for Sangareddy constituency from 2018 to 2023.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-3">
@@ -212,9 +200,9 @@ function Hero() {
 
           <div className="mt-12 grid grid-cols-3 gap-6 max-w-md">
             {[
-              { n: 26, s: "+", l: "Years in Service" },
-              { n: 320, s: "+", l: "Initiatives Led" },
-              { n: 1.2, s: "M+", l: "Lives Touched", float: true },
+              { n: 22, s: "+", l: "Years in Service" },
+              // { n: 320, s: "+", l: "Initiatives Led" },
+              // { n: 1.2, s: "M+", l: "Lives Touched", float: true },
             ].map((s) => (
               <div key={s.l}>
                 <div className="text-3xl font-bold text-neutral-900" style={{ fontFamily: "Playfair Display, serif" }}>
@@ -237,13 +225,13 @@ function Hero() {
                 width={1024}
                 height={1280}
               />
-              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent" />
+              {/* <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 text-white">
                 <div className="text-xs uppercase tracking-[0.2em] opacity-80">Hon'ble Leader</div>
                 <div className="text-2xl font-semibold" style={{ fontFamily: "Playfair Display, serif" }}>
                   Sri Jaya Prakash Reddy
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="absolute -bottom-6 -left-6 glass rounded-2xl px-5 py-4 shadow-xl max-w-[220px]">
@@ -252,7 +240,7 @@ function Hero() {
                 <span className="text-[11px] uppercase tracking-wider text-neutral-600">Recognition</span>
               </div>
               <p className="text-sm font-medium text-neutral-900 leading-snug">
-                Awarded for outstanding contribution to rural development.
+                జనం మెచ్చిన నాయకుడు
               </p>
             </div>
           </div>
@@ -283,8 +271,8 @@ function SectionHeader({
 
 function Biography() {
   const blocks = [
-    { icon: Sparkles, t: "Early Life", d: "Born and raised in a humble family rooted in the values of seva, integrity and community welfare — formative experiences that continue to shape his outlook today." },
-    { icon: GraduationCap, t: "Education", d: "Completed his higher education with distinction, building a foundation in public administration, law and rural economics that informs every policy stance." },
+    { icon: Sparkles, t: "Early Life", d: "Born on 7 July 1966 in Indrakaran, Medak district, India, he has dedicated decades of his life to public service and leadership, earning recognition for his commitment to the people and the region" },
+    { icon: GraduationCap, t: "Education", d: "Completed his secondary education in 1982." },
     { icon: Compass, t: "Political Vision", d: "Believes in an inclusive India where opportunity is universal — strengthening farmers, supporting small businesses, and elevating women and youth into leadership." },
     { icon: Flag, t: "Leadership Philosophy", d: "Leads by listening. Decisions are made closest to the people they affect, rooted in transparency, accountability and tireless on-the-ground presence." },
   ];
@@ -294,14 +282,14 @@ function Biography() {
         <SectionHeader
           eyebrow="Biography"
           title={<>A life shaped by <span className="italic text-[#0b8a4a]">service</span>, conviction and the people.</>}
-          lead="From village panchayats to legislative chambers, his journey is a testament to the belief that politics is, above all, a vocation of service."
+          lead="From councilor to legislative chambers, his journey is a testament to the belief that politics is, above all, a vocation of service."
         />
 
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           <div className="lg:col-span-5 reveal">
             <div className="relative">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl ring-1 ring-black/5">
-                <img src={village} alt="Connecting with villagers" className="w-full h-full object-cover" loading="lazy" />
+                <img src={g} alt="Connecting with villagers" className="w-full h-full object-cover" loading="lazy" />
               </div>
               <div className="absolute -bottom-6 -right-6 hidden md:block bg-white border border-neutral-200 rounded-2xl p-5 shadow-xl max-w-[240px]">
                 <Quote className="w-5 h-5 text-[#e8721a]" />
@@ -336,12 +324,12 @@ function Biography() {
 
 function Journey() {
   const milestones = [
-    { y: "1998", t: "Entry into Public Life", d: "Began grassroots activism, organising youth groups and farmer collectives across the district.", icon: Sprout },
-    { y: "2004", t: "First Elected Mandate", d: "Elected to local body with a historic margin on a platform of clean water and rural roads.", icon: Flag },
-    { y: "2009", t: "State Leadership Role", d: "Appointed to key party committees, leading outreach in over 400 villages.", icon: Users },
-    { y: "2014", t: "Member of Legislative Assembly", d: "Sworn in as MLA; championed bills on education access and women's safety.", icon: Building2 },
-    { y: "2019", t: "National Recognition", d: "Honoured for sustained work in rural development and digital inclusion.", icon: Award },
-    { y: "2024", t: "A New Chapter", d: "Launched the People's Progress Movement, focused on jobs, healthcare and clean governance.", icon: Briefcase },
+    { y: "0000", t: "Entry into Public Life", d: "He started career as a councilor and then became municipal chairman", icon: Sprout },
+    { y: "2004", t: "MLA Position", d: "He was elected as the MLA from the Sangareddy constituency , reflecting the trust and support of the people through his political leadership.", icon: Flag },
+    { y: "2009", t: "Re-elected as MLA", d: "He was re-elected as the MLA from the Sangareddy constituency, reaffirming his strong public support and influential presence in regional politics.", icon: Users },
+    { y: "2014", t: "Loss of Regime", d: "In 2014, he contested from the Medak constituency , but was unsuccessful in securing victory as MLA.", icon: Building2 },
+    { y: "2018", t: "Regain of Regime", d: "He was elected as the MLA from the Sangareddy constituency representing the Indian National Congress (INC), reaffirming his strong public support and influential presence in regional politics.", icon: Award },
+    //{ y: "2024", t: "A New Chapter", d: "Launched the People's Progress Movement, focused on jobs, healthcare and clean governance.", icon: Briefcase },
   ];
   return (
     <section id="journey" className="relative py-28 lg:py-36 bg-[#0a0a0a] text-white overflow-hidden">
@@ -390,61 +378,208 @@ function Journey() {
   );
 }
 
+
+import hearing from "@/assets/videos/hearing.mp4";
+import hearingPoster from "@/assets/hearing.jpeg";
+
+import cycles from "@/assets/videos/cycles.mp4";
+import cyclesPoster from "@/assets/cycle.jpeg";
+
+import kjs from "@/assets/videos/kjs.mp4";
+import kjsPoster from "@/assets/kjs.jpeg";
+
+import devotion from "@/assets/videos/devotion.mp4";
+import devotionPoster from "@/assets/devotion.jpeg";
+
+import dargah from "@/assets/videos/dargah.mp4";
+import dargahPoster from "@/assets/dargah.jpeg";
+
+
+import delimitation from "@/assets/videos/delimitation.mp4";
+import delimitationPoster from "@/assets/delimitation.jpeg";
+
 function Appearances() {
   const items = [
-    { img: rally, cat: "Rally", t: "Mega Public Rally, District Grounds", d: "Address to over fifty thousand supporters on jobs and welfare." },
-    { img: speech, cat: "Speech", t: "Keynote at State Convention", d: "Outlining the ten-point agenda for inclusive growth." },
-    { img: interview, cat: "Interview", t: "Prime-time News Interview", d: "Conversation on governance reforms and youth opportunities." },
-    { img: village, cat: "Meeting", t: "Farmer Outreach Programme", d: "Listening session with cultivators on irrigation and MSP." },
-    { img: inauguration, cat: "Welfare", t: "Health Centre Inauguration", d: "Launch of a new primary care facility serving 12 villages." },
-    { img: education, cat: "Welfare", t: "School Supplies Distribution", d: "Notebooks and learning kits for government school students." },
+    { vid: hearing, poster: hearingPoster, cat: "Hearing", t: "Children requesting for Cycles.", d: "Jagga Reddy warmly interacted with children who visited his residence seeking bicycles, listening attentively to their requests and encouraging them with compassion and support." },
+    { vid: cycles, poster: cyclesPoster, cat: "Cycles", t: "Cycles distribution to children.", d: "Jagga Reddy continues to lead a bicycle distribution initiative in Sangareddy, bringing joy and support to young children across the constituency. In the latest phase of the program, he distributed bicycles to 70 more children, with special focus on those below eight years of age. With this, the total number of bicycles distributed has reached 400. " },
+    { vid: kjs, poster: kjsPoster, cat: "KJS", t: "KJS India Private Limited Unit 2 at Thogarpally.", d: "The 651 crore project is expected to generate direct employment for 1,551 people and indirect opportunities for nearly 5,000 more, while strengthening Telangana's food processing and FM ecosystem." },
+    { vid: devotion, poster: devotionPoster, cat: "Devotion", t: "Devotion to the God.", d: "Jagga Reddy participated in the bhajan programme at the temple and joined devotees in devotional singing." },
+    { vid: dargah, poster: dargahPoster, cat: "Dargah", t: "Participated in Dargah Ursu Celebrations.", d: "Jagga Reddy visited the dargah and offered prayers, showing his respect for the spiritual site and connecting with the local community." },
+    { vid: delimitation, poster: delimitationPoster, cat: "Delimitation Bill", t: "Opposed Delimitation bill publicly", d: "Jagga Reddy participated in the delimitation ceremony, engaging with local leaders and residents to discuss the implications of the new boundaries." }
   ];
+
+  const [modal, setModal] = useState<null | typeof items[0]>(null);
+  const [playing, setPlaying] = useState<number | null>(null);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+  const handlePlay = (i: number) => {
+    const vid = videoRefs.current[i];
+    if (!vid) return;
+    if (playing === i) {
+      vid.pause();
+      setPlaying(null);
+    } else {
+      // pause previously playing
+      if (playing !== null) {
+        videoRefs.current[playing]?.pause();
+      }
+      vid.play();
+      setPlaying(i);
+    }
+  };
+
+  const handleVideoEnd = (i: number) => {
+    if (playing === i) setPlaying(null);
+  };
+
   return (
-    <section id="appearances" className="py-28 lg:py-36">
-      <div className="max-w-7xl mx-auto px-5 lg:px-10">
-        <SectionHeader
-          eyebrow="Public Appearances"
-          title={<>On the ground, <span className="italic text-[#e8721a]">with the people</span> — every single day.</>}
-          lead="A glimpse into rallies, speeches, interviews and welfare programmes that anchor a life of constant public engagement."
-        />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {items.map((it, i) => (
-            <article key={i} className="reveal group relative rounded-2xl overflow-hidden bg-white border border-neutral-200 shadow-sm hover:shadow-2xl transition-all duration-500">
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <img src={it.img} alt={it.t} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1200ms]" />
-                <span className="absolute top-4 left-4 px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-white/90 text-neutral-900 backdrop-blur">
-                  {it.cat}
-                </span>
-              </div>
-              <div className="p-6">
-                <h3 className="font-semibold text-lg text-neutral-900 leading-snug">{it.t}</h3>
-                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">{it.d}</p>
-                <div className="mt-4 flex items-center gap-1 text-sm font-medium text-[#e8721a] group-hover:gap-2 transition-all">
-                  Read more <ArrowRight className="w-4 h-4" />
+    <>
+      <section id="appearances" className="py-28 lg:py-36">
+        <div className="max-w-7xl mx-auto px-5 lg:px-10">
+          <SectionHeader
+            eyebrow="Public Appearances"
+            title={<>On the ground, <span className="italic text-[#e8721a]">with the people</span> — every single day.</>}
+            lead="A glimpse into rallies, speeches, interviews and welfare programmes that anchor a life of constant public engagement."
+          />
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {items.map((it, i) => (
+              <article
+                key={i}
+                className="reveal group relative rounded-2xl overflow-hidden bg-white border border-neutral-200 shadow-sm hover:shadow-2xl transition-all duration-500"
+              >
+                {/* ── Video thumbnail area ── */}
+                <div className="relative aspect-[4/3] overflow-hidden bg-black">
+                  <video
+                    ref={el => { videoRefs.current[i] = el; }}
+                    src={it.vid}
+                    poster={it.poster}
+                    playsInline
+                    preload="none"
+                    onEnded={() => handleVideoEnd(i)}
+                    className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
+                  />
+
+                  {/* Category badge */}
+                  <span className="absolute top-4 left-4 px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-white/90 text-neutral-900 backdrop-blur pointer-events-none">
+                    {it.cat}
+                  </span>
+
+                  {/* Play / Pause overlay */}
+                  <button
+                    onClick={() => handlePlay(i)}
+                    aria-label={playing === i ? "Pause" : "Play"}
+                    className="
+                      absolute inset-0 flex items-center justify-center
+                      transition-opacity duration-300
+                      focus:outline-none
+                    "
+                  >
+                    <span
+                      className={`
+                        flex items-center justify-center
+                        w-14 h-14 rounded-full
+                        bg-white/90 backdrop-blur shadow-lg
+                        transition-all duration-300
+                        ${playing === i
+                          ? "opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100"
+                          : "opacity-100 scale-100"}
+                      `}
+                    >
+                      {playing === i ? (
+                        /* Pause icon — two bars */
+                        <span className="flex gap-[5px]">
+                          <span className="w-[4px] h-5 rounded-sm bg-neutral-900 block" />
+                          <span className="w-[4px] h-5 rounded-sm bg-neutral-900 block" />
+                        </span>
+                      ) : (
+                        <Play className="w-6 h-6 text-neutral-900 translate-x-0.5" fill="currentColor" />
+                      )}
+                    </span>
+                  </button>
                 </div>
-              </div>
-            </article>
-          ))}
+
+                {/* ── Card body ── */}
+                <div className="p-6">
+                  <h3 className="font-semibold text-lg text-neutral-900 leading-snug">{it.t}</h3>
+                  <p className="mt-2 text-sm text-neutral-600 leading-relaxed line-clamp-2">{it.d}</p>
+                  <button
+                    onClick={() => setModal(it)}
+                    className="mt-4 flex items-center gap-1 text-sm font-medium text-[#e8721a] hover:gap-2 transition-all focus:outline-none"
+                  >
+                    Read more <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* ── Modal ── */}
+      {modal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label={modal.t}
+        >
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            onClick={() => setModal(null)}
+          />
+
+          {/* Panel */}
+          <div className="relative z-10 bg-white rounded-2xl shadow-2xl max-w-lg w-full overflow-hidden animate-fade-in">
+            {/* Video preview inside modal */}
+            <div className="aspect-video bg-black">
+              <video
+                src={modal.vid}
+                poster={modal.poster}
+                controls
+                autoPlay
+                playsInline
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="p-6">
+              <span className="px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-[#e8721a]/10 text-[#e8721a]">
+                {modal.cat}
+              </span>
+              <h2 className="mt-3 text-xl font-bold text-neutral-900 leading-snug">{modal.t}</h2>
+              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{modal.d}</p>
+            </div>
+
+            {/* Close button */}
+            <button
+              onClick={() => setModal(null)}
+              className="absolute top-3 right-3 flex items-center justify-center w-9 h-9 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors focus:outline-none"
+              aria-label="Close"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
 function Achievements() {
   const stats = [
-    { n: 26, s: "+", l: "Years of Service", icon: Calendar },
-    { n: 320, s: "+", l: "Welfare Initiatives", icon: HandHeart },
-    { n: 480, s: "", l: "Villages Reached", icon: MapPin },
-    { n: 65, s: "K+", l: "Youth Empowered", icon: Users },
+    { n: 22, s: "+", l: "Years of Service", icon: Calendar },
+    { n: 300, s: "+", l: "Welfare Initiatives", icon: HandHeart },
+    { n: 100, s: "+", l: "Villages Reached", icon: MapPin },
   ];
   const cards = [
-    { icon: Sprout, t: "Rural Empowerment Programme", d: "Built micro-irrigation networks across 120 villages, lifting farm incomes by an estimated 28%." },
-    { icon: GraduationCap, t: "Scholarships for Bright Minds", d: "Funded higher education for over 4,000 students from underprivileged backgrounds." },
-    { icon: HandHeart, t: "Women & Self-Help Groups", d: "Mobilised 1,800+ SHGs with seed capital, market linkage and digital literacy training." },
+    { icon: HandHeart, t: "Assured 300 Crores", d: "Jagga Reddy assures ₹300 crore for Sangareddy Municipality, seeks votes in 38 municipal wards" },
+    { icon: Sprout, t: "Rural Empowerment Programme", d: "Built micro-irrigation networks across 120 villages, lifting farm incomes ." },
+    { icon: GraduationCap, t: "Scholarships for Bright Minds", d: "Funded higher education for students from underprivileged backgrounds." },
     { icon: Building2, t: "Public Infrastructure", d: "Championed the development of roads, health centres and public schools in underserved blocks." },
-    { icon: Award, t: "Awards & Honours", d: "Recipient of multiple state and national recognitions for community service and clean politics." },
-    { icon: Heart, t: "Healthcare for All", d: "Organised over 250 free medical camps, screening more than 1.5 lakh citizens." },
+    { icon: Award, t: "Honours", d: "Recipient of multiple state and national recognitions for community service and clean politics." },
+    { icon: Heart, t: "Healthcare for All", d: "Organised several free medical camps, screening vast number of citizens." },
   ];
   return (
     <section id="achievements" className="py-28 lg:py-36 bg-gradient-to-b from-[#fff8ef] to-[#f1faf3]">
@@ -482,12 +617,31 @@ function Achievements() {
   );
 }
 
+const videos = [
+  { videoUrl: "https://www.youtube.com/watch?v=lnpY-7p0Neg", title: "Congress Jagga Reddy Press Meet" },
+  { videoUrl: "https://www.youtube.com/watch?v=7VWPlbYG47E", title: "Congress Senior Leader Jagga Reddy speaks On Cockroach Janata Party Digital Political Wars" },
+  { videoUrl: "https://www.youtube.com/watch?v=C2Q3JkC4Rbc", title: "Jagga Reddy Aggressive Comments In Press Meet" },
+];
+
+function getYouTubeId(videoUrl: string): string | null {
+  const match = videoUrl.match(
+    /(?:youtube\.com\/(?:watch\?v=|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/
+  );
+  return match ? match[1] : null;
+}
+
+function getYouTubeThumbnail(videoUrl: string): string {
+  const id = getYouTubeId(videoUrl);
+  return id ? `https://img.youtube.com/vi/${id}/maxresdefault.jpg` : "/fallback-thumbnail.jpg";
+}
+
 function Media() {
   const press = [
-    { src: "The National Daily", t: "A leader who walks with farmers, not above them." },
-    { src: "State Tribune", t: "Jagga Reddy's welfare model is a blueprint for rural India." },
-    { src: "City Mirror", t: "Youth programmes spark a new wave of civic participation." },
+    { src: "Times Of India", t: "Jagga Reddy urges CJP to support INC.", link: "https://timesofindia.indiatimes.com/city/hyderabad/jagga-reddy-urges-cjp-to-support-cong/articleshow/131281054.cms" },
+    { src: "The Hindu", t: "'Back Rahul Gandhi's call for Samvidhan Bachao', says Jagga Reddy.", link: "https://www.thehindu.com/news/national/telangana/back-rahul-gandhis-call-for-samvidhan-bachao-says-jagga-reddy/article71014241.ece" },
+    { src: "The Hindu", t: "Jagga Reddy defends his actions, alleges police misconduct", link: "https://www.thehindu.com/news/national/telangana/jagga-reddy-defends-his-actions-alleges-police-misconduct/article70624868.ece" },
   ];
+
   return (
     <section id="media" className="py-28 lg:py-36">
       <div className="max-w-7xl mx-auto px-5 lg:px-10">
@@ -498,18 +652,27 @@ function Media() {
         />
 
         <div className="grid lg:grid-cols-3 gap-6 mb-12">
-          {[speech, interview, rally].map((img, i) => (
-            <button key={i} className="reveal group relative aspect-video rounded-2xl overflow-hidden bg-black ring-1 ring-black/5 shadow-md hover:shadow-2xl transition-shadow text-left">
-              <img src={img} alt="Video thumbnail" loading="lazy" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
+          {videos.map((video, i) => (
+            <a
+              key={i}
+              href={video.videoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="reveal group relative aspect-video rounded-2xl overflow-hidden bg-black ring-1 ring-black/5 shadow-md hover:shadow-2xl transition-shadow"
+            >
+              <img
+                src={getYouTubeThumbnail(video.videoUrl)}
+                alt={video.title}
+                loading="lazy"
+                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <PlayCircle className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 text-white drop-shadow-2xl group-hover:scale-110 transition-transform" />
               <div className="absolute bottom-4 left-5 right-5 text-white">
-                <div className="text-[10px] uppercase tracking-[0.2em] opacity-80">Video</div>
-                <div className="text-base font-semibold mt-1 line-clamp-2">
-                  {["Address at State Convention", "Prime-time Interview on Reforms", "People's Progress Rally"][i]}
-                </div>
+                <div className="text-[10px] uppercase tracking-[0.2em] opacity-80">YouTube</div>
+                <div className="text-base font-semibold mt-1 line-clamp-2">{video.title}</div>
               </div>
-            </button>
+            </a>
           ))}
         </div>
 
@@ -519,39 +682,42 @@ function Media() {
               <Newspaper className="w-5 h-5 text-[#0b8a4a]" />
               <div className="mt-4 text-[11px] uppercase tracking-wider text-neutral-500">{p.src}</div>
               <h3 className="mt-1 text-lg font-semibold text-neutral-900 leading-snug">"{p.t}"</h3>
-              <a href="#" className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#e8721a] hover:gap-3 transition-all">
+              <a href={p.link} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#e8721a] hover:gap-3 transition-all">
                 Read article <ArrowRight className="w-4 h-4" />
               </a>
             </article>
           ))}
-        </div>
-
-        <div className="mt-10 reveal flex flex-wrap items-center justify-between gap-6 rounded-2xl bg-[#0a0a0a] text-white p-8">
-          <div className="flex items-center gap-4">
-            <Mic2 className="w-7 h-7 text-[#ff8a1f]" />
-            <div>
-              <div className="font-semibold text-lg">Speech & Press Kit</div>
-              <div className="text-white/60 text-sm">Photos, biography and approved statements for media use.</div>
-            </div>
-          </div>
-          <a href="#" className="inline-flex items-center gap-2 bg-white text-neutral-900 font-medium px-5 py-3 rounded-full hover:bg-[#ff8a1f] hover:text-white transition-colors">
-            <Download className="w-4 h-4" /> Download Media Kit
-          </a>
         </div>
       </div>
     </section>
   );
 }
 
+import a from "@/assets/gallery/1.jpg";
+import b from "@/assets/gallery/2.jpg";
+import c from "@/assets/gallery/3.jpg";
+import d from "@/assets/gallery/4.jpg";
+import e from "@/assets/gallery/5.jpg";
+import f from "@/assets/gallery/6.jpg";
+import g from "@/assets/gallery/7.jpg";
+import h from "@/assets/gallery/8.jpg";
+import i from "@/assets/gallery/9.jpg";
+import j from "@/assets/gallery/10.jpg";
+import k from "@/assets/gallery/11.jpg";
+
 function Gallery() {
   const imgs = [
-    { src: rally, c: "Mega rally at sunset", span: "lg:row-span-2" },
-    { src: village, c: "With farmers in the heartland" },
-    { src: speech, c: "On the podium" },
-    { src: education, c: "Empowering young learners", span: "lg:row-span-2" },
-    { src: inauguration, c: "Inaugurating community health centre" },
-    { src: plantation, c: "Green India initiative" },
-    { src: interview, c: "Prime-time conversation" },
+    { src: a, c: "Pampering child" },
+    { src: b, c: "KJS project inaugural" },
+    { src: c, c: "Shining like sun in hot summer" },
+    { src: d, c: "Observing the community", span: "lg:row-span-2" },
+    { src: k, c: "Glimpse of Holi celebrations", span: "lg:row-span-2" },
+    { src: e, c: "Met Honuorable Irrigation and CAD minister Uttam Kumar Reddy gaaru" },
+    { src: f, c: "Addressing students at Govt. High School" },
+    { src: g, c: "Observing the community" },
+    { src: i, c: "Attended celebration at Dargah" },
+    { src: j, c: "Offering the marriage rituals of Sitaram" },
+    //{ src: k, c: "Glimpse of Holi celebrations" },
   ];
   const [open, setOpen] = useState<string | null>(null);
   return (
@@ -600,113 +766,388 @@ function Gallery() {
   );
 }
 
+// function Engagement() {
+//   return (
+//     <section id="engage" className="py-28 lg:py-36 bg-gradient-to-b from-white to-[#fff8ef]">
+//       <div className="max-w-7xl mx-auto px-5 lg:px-10">
+//         <SectionHeader
+//           eyebrow="Public Engagement"
+//           title={<>Your voice matters. <span className="italic text-[#e8721a]">Let's build together.</span></>}
+//           lead="Reach out, share a grievance, volunteer for the movement, or stay informed through our newsletter."
+//         />
+
+//         <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
+//           {/* Contact form */}
+//           <form 
+//             onSubmit={(e) => { e.preventDefault(); alert("Thank you — your message has been received."); }}
+//             className="lg:col-span-2 reveal bg-white border border-neutral-200 rounded-3xl p-8 lg:p-10 shadow-sm"
+//           >
+//             <h3 className="text-2xl font-semibold text-neutral-900">Contact & Grievance Form</h3>
+//             <p className="mt-2 text-sm text-neutral-600">Share your concerns, suggestions or feedback. Every message is read.</p>
+//             <div className="mt-7 grid sm:grid-cols-2 gap-4">
+//               {[
+//                 { l: "Full Name", t: "text", p: "Your name" },
+//                 { l: "Phone", t: "tel", p: "+91 00000 00000" },
+//                 { l: "Email", t: "email", p: "you@example.com" },
+//                 { l: "District / Town", t: "text", p: "Your location" },
+//               ].map((f) => (
+//                 <label key={f.l} className="block">
+//                   <span className="text-xs font-medium text-neutral-700 uppercase tracking-wider">{f.l}</span>
+//                   <input
+//                     type={f.t}
+//                     required
+//                     placeholder={f.p}
+//                     className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50/60 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#ff8a1f]/40 focus:bg-white transition"
+//                   />
+//                 </label>
+//               ))}
+//               <label className="block sm:col-span-2">
+//                 <span className="text-xs font-medium text-neutral-700 uppercase tracking-wider">Category</span>
+//                 <select className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50/60 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#ff8a1f]/40 focus:bg-white">
+//                   <option>General Enquiry</option>
+//                   <option>Public Grievance</option>
+//                   <option>Volunteer Interest</option>
+//                   <option>Media Request</option>
+//                 </select>
+//               </label>
+//               <label className="block sm:col-span-2">
+//                 <span className="text-xs font-medium text-neutral-700 uppercase tracking-wider">Your Message</span>
+//                 <textarea
+//                   rows={5}
+//                   required
+//                   placeholder="Tell us how we can help…"
+//                   className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50/60 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#ff8a1f]/40 focus:bg-white transition"
+//                 />
+//               </label>
+//             </div>
+//             <button
+//               type="submit"
+//               className="mt-6 inline-flex items-center gap-2 bg-[#0a0a0a] text-white font-medium px-6 py-3.5 rounded-full hover:bg-[#0b8a4a] transition-colors"
+//             >
+//               Submit Message <Send className="w-4 h-4" />
+//             </button>
+//           </form>
+
+//           <div className="space-y-6">
+//             {/* Volunteer */}
+//             <div className="reveal relative overflow-hidden rounded-3xl p-8 bg-gradient-to-br from-[#ff8a1f] to-[#e8721a] text-white shadow-lg">
+//               <HandHeart className="w-8 h-8" />
+//               <h3 className="mt-4 text-2xl font-semibold">Become a Volunteer</h3>
+//               <p className="mt-2 text-white/90 text-sm leading-relaxed">
+//                 Join thousands of citizens working shoulder to shoulder for a better tomorrow.
+//               </p>
+//               <a href="#" className="mt-5 inline-flex items-center gap-2 bg-white text-[#e8721a] font-medium px-5 py-2.5 rounded-full text-sm hover:bg-neutral-900 hover:text-white transition-colors">
+//                 Sign up to volunteer <ArrowRight className="w-4 h-4" />
+//               </a>
+//             </div>
+
+//             {/* Newsletter
+//             <form onSubmit={(e) => { e.preventDefault(); alert("Subscribed!"); }} className="reveal rounded-3xl p-8 bg-white border border-neutral-200">
+//               <h3 className="text-xl font-semibold text-neutral-900">Stay Informed</h3>
+//               <p className="mt-1 text-sm text-neutral-600">Monthly newsletter on initiatives, events and policy updates.</p>
+//               <div className="mt-4 flex gap-2">
+//                 <input type="email" required placeholder="you@example.com" className="flex-1 rounded-full border border-neutral-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0b8a4a]/40" />
+//                 <button className="bg-[#0b8a4a] text-white font-medium px-5 py-3 rounded-full hover:bg-[#066b39] transition-colors">Subscribe</button>
+//               </div>
+//             </form> */}
+
+//             {/* Office */}
+//             <div className="reveal rounded-3xl p-8 bg-neutral-900 text-white">
+//               <h3 className="text-xl font-semibold">Office Contact</h3>
+//               <ul className="mt-4 space-y-3 text-sm text-white/80">
+//                 <li className="flex items-start gap-3"><MapPin className="w-4 h-4 mt-0.5 text-[#ff8a1f]" /> Office of Sri Jaya Prakash Reddy,<br /> Main Road, [District], Telangana 500000</li>
+//                 <li className="flex items-center gap-3"><Phone className="w-4 h-4 text-[#ff8a1f]" /> +91 00000 00000</li>
+//                 <li className="flex items-center gap-3"><Mail className="w-4 h-4 text-[#ff8a1f]" /> office@jaggareddy.in</li>
+//               </ul>
+//               <div className="mt-5 flex items-center gap-3">
+//                 {[Facebook, Twitter, Instagram, Youtube].map((Ic, i) => (
+//                   <a key={i} href="#" className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#ff8a1f] grid place-items-center transition-colors">
+//                     <Ic className="w-4 h-4" />
+//                   </a>
+//                 ))}
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { db } from "../firebase";
+
 function Engagement() {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phone: "",
+    email: "",
+    district: "",
+    category: "General Enquiry",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
+    e.preventDefault();
+
+    try {
+      setLoading(true);
+
+      await addDoc(collection(db, "engagements"), {
+        ...formData,
+        createdAt: serverTimestamp(),
+      });
+
+      alert("Thank you — your message has been received.");
+
+      setFormData({
+        fullName: "",
+        phone: "",
+        email: "",
+        district: "",
+        category: "General Enquiry",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <section id="engage" className="py-28 lg:py-36 bg-gradient-to-b from-white to-[#fff8ef]">
+    <section
+      id="engage"
+      className="py-28 lg:py-36 bg-gradient-to-b from-white to-[#fff8ef]"
+    >
       <div className="max-w-7xl mx-auto px-5 lg:px-10">
         <SectionHeader
           eyebrow="Public Engagement"
-          title={<>Your voice matters. <span className="italic text-[#e8721a]">Let's build together.</span></>}
+          title={
+            <>
+              Your voice matters.{" "}
+              <span className="italic text-[#e8721a]">
+                Let's build together.
+              </span>
+            </>
+          }
           lead="Reach out, share a grievance, volunteer for the movement, or stay informed through our newsletter."
         />
 
         <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
-          {/* Contact form */}
+          {/* Contact Form */}
           <form
-            onSubmit={(e) => { e.preventDefault(); alert("Thank you — your message has been received."); }}
-            className="lg:col-span-2 reveal bg-white border border-neutral-200 rounded-3xl p-8 lg:p-10 shadow-sm"
+            onSubmit={handleSubmit}
+            className="lg:col-span-3 reveal bg-white border border-neutral-200 rounded-3xl p-8 lg:p-10 shadow-sm"
           >
-            <h3 className="text-2xl font-semibold text-neutral-900">Contact & Grievance Form</h3>
-            <p className="mt-2 text-sm text-neutral-600">Share your concerns, suggestions or feedback. Every message is read.</p>
+            <h3 className="text-2xl font-semibold text-neutral-900">
+              Contact & Grievance Form
+            </h3>
+
+            <p className="mt-2 text-sm text-neutral-600">
+              Share your concerns, suggestions or feedback. Every message is
+              read.
+            </p>
+
             <div className="mt-7 grid sm:grid-cols-2 gap-4">
-              {[
-                { l: "Full Name", t: "text", p: "Your name" },
-                { l: "Phone", t: "tel", p: "+91 00000 00000" },
-                { l: "Email", t: "email", p: "you@example.com" },
-                { l: "District / Town", t: "text", p: "Your location" },
-              ].map((f) => (
-                <label key={f.l} className="block">
-                  <span className="text-xs font-medium text-neutral-700 uppercase tracking-wider">{f.l}</span>
-                  <input
-                    type={f.t}
-                    required
-                    placeholder={f.p}
-                    className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50/60 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#ff8a1f]/40 focus:bg-white transition"
-                  />
-                </label>
-              ))}
+              {/* Full Name */}
+              <label className="block">
+                <span className="text-xs font-medium text-neutral-700 uppercase tracking-wider">
+                  Full Name
+                </span>
+
+                <input
+                  type="text"
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  required
+                  placeholder="Your name"
+                  className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50/60 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#ff8a1f]/40 focus:bg-white transition"
+                />
+              </label>
+
+              {/* Phone */}
+              <label className="block">
+                <span className="text-xs font-medium text-neutral-700 uppercase tracking-wider">
+                  Phone
+                </span>
+
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  placeholder="+91 00000 00000"
+                  className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50/60 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#ff8a1f]/40 focus:bg-white transition"
+                />
+              </label>
+
+              {/* Email */}
+              <label className="block">
+                <span className="text-xs font-medium text-neutral-700 uppercase tracking-wider">
+                  Email
+                </span>
+
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  placeholder="you@example.com"
+                  className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50/60 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#ff8a1f]/40 focus:bg-white transition"
+                />
+              </label>
+
+              {/* District */}
+              <label className="block">
+                <span className="text-xs font-medium text-neutral-700 uppercase tracking-wider">
+                  District / Town
+                </span>
+
+                <input
+                  type="text"
+                  name="district"
+                  value={formData.district}
+                  onChange={handleChange}
+                  required
+                  placeholder="Your location"
+                  className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50/60 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#ff8a1f]/40 focus:bg-white transition"
+                />
+              </label>
+
+              {/* Category */}
               <label className="block sm:col-span-2">
-                <span className="text-xs font-medium text-neutral-700 uppercase tracking-wider">Category</span>
-                <select className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50/60 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#ff8a1f]/40 focus:bg-white">
+                <span className="text-xs font-medium text-neutral-700 uppercase tracking-wider">
+                  Category
+                </span>
+
+                <select
+                  name="category"
+                  value={formData.category}
+                  onChange={handleChange}
+                  className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50/60 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#ff8a1f]/40 focus:bg-white"
+                >
                   <option>General Enquiry</option>
                   <option>Public Grievance</option>
                   <option>Volunteer Interest</option>
-                  <option>Media Request</option>
                 </select>
               </label>
+
+              {/* Message */}
               <label className="block sm:col-span-2">
-                <span className="text-xs font-medium text-neutral-700 uppercase tracking-wider">Your Message</span>
+                <span className="text-xs font-medium text-neutral-700 uppercase tracking-wider">
+                  Your Message
+                </span>
+
                 <textarea
                   rows={5}
                   required
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Tell us how we can help…"
                   className="mt-2 w-full rounded-xl border border-neutral-200 bg-neutral-50/60 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#ff8a1f]/40 focus:bg-white transition"
                 />
               </label>
             </div>
+
+            {/* Submit Button */}
             <button
               type="submit"
-              className="mt-6 inline-flex items-center gap-2 bg-[#0a0a0a] text-white font-medium px-6 py-3.5 rounded-full hover:bg-[#0b8a4a] transition-colors"
+              disabled={loading}
+              className="mt-6 inline-flex items-center gap-2 bg-[#0a0a0a] text-white font-medium px-6 py-3.5 rounded-full hover:bg-[#0b8a4a] transition-colors disabled:opacity-60"
             >
-              Submit Message <Send className="w-4 h-4" />
+              {loading ? "Submitting..." : "Submit Message"}
+
+              <Send className="w-4 h-4" />
             </button>
           </form>
 
-          <div className="space-y-6">
-            {/* Volunteer */}
+          {/*<div className="space-y-6"> 
+            Volunteer Card
             <div className="reveal relative overflow-hidden rounded-3xl p-8 bg-gradient-to-br from-[#ff8a1f] to-[#e8721a] text-white shadow-lg">
               <HandHeart className="w-8 h-8" />
-              <h3 className="mt-4 text-2xl font-semibold">Become a Volunteer</h3>
+
+              <h3 className="mt-4 text-2xl font-semibold">
+                Become a Volunteer
+              </h3>
+
               <p className="mt-2 text-white/90 text-sm leading-relaxed">
-                Join thousands of citizens working shoulder to shoulder for a better tomorrow.
+                Join thousands of citizens working shoulder to shoulder for a
+                better tomorrow.
               </p>
-              <a href="#" className="mt-5 inline-flex items-center gap-2 bg-white text-[#e8721a] font-medium px-5 py-2.5 rounded-full text-sm hover:bg-neutral-900 hover:text-white transition-colors">
-                Sign up to volunteer <ArrowRight className="w-4 h-4" />
+
+              <a
+                href="#"
+                className="mt-5 inline-flex items-center gap-2 bg-white text-[#e8721a] font-medium px-5 py-2.5 rounded-full text-sm hover:bg-neutral-900 hover:text-white transition-colors"
+              >
+                Sign up to volunteer
+
+                <ArrowRight className="w-4 h-4" />
               </a>
-            </div>
+            </div> 
 
-            {/* Newsletter */}
-            <form onSubmit={(e) => { e.preventDefault(); alert("Subscribed!"); }} className="reveal rounded-3xl p-8 bg-white border border-neutral-200">
-              <h3 className="text-xl font-semibold text-neutral-900">Stay Informed</h3>
-              <p className="mt-1 text-sm text-neutral-600">Monthly newsletter on initiatives, events and policy updates.</p>
-              <div className="mt-4 flex gap-2">
-                <input type="email" required placeholder="you@example.com" className="flex-1 rounded-full border border-neutral-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0b8a4a]/40" />
-                <button className="bg-[#0b8a4a] text-white font-medium px-5 py-3 rounded-full hover:bg-[#066b39] transition-colors">Subscribe</button>
-              </div>
-            </form>
-
-            {/* Office */}
+            Office Contact
             <div className="reveal rounded-3xl p-8 bg-neutral-900 text-white">
               <h3 className="text-xl font-semibold">Office Contact</h3>
+
               <ul className="mt-4 space-y-3 text-sm text-white/80">
-                <li className="flex items-start gap-3"><MapPin className="w-4 h-4 mt-0.5 text-[#ff8a1f]" /> Office of Sri Jaya Prakash Reddy,<br /> Main Road, [District], Telangana 500000</li>
-                <li className="flex items-center gap-3"><Phone className="w-4 h-4 text-[#ff8a1f]" /> +91 00000 00000</li>
-                <li className="flex items-center gap-3"><Mail className="w-4 h-4 text-[#ff8a1f]" /> office@jaggareddy.in</li>
+                <li className="flex items-start gap-3">
+                  <MapPin className="w-4 h-4 mt-0.5 text-[#ff8a1f]" />
+                  Office of Sri Jaya Prakash Reddy,
+                  <br />
+                  Main Road, Sangareddy, Telangana
+                </li>
+
+                <li className="flex items-center gap-3">
+                  <Phone className="w-4 h-4 text-[#ff8a1f]" />
+                  +91 00000 00000
+                </li>
+
+                <li className="flex items-center gap-3">
+                  <Mail className="w-4 h-4 text-[#ff8a1f]" />
+                  office@jaggareddy.in
+                </li>
               </ul>
+
               <div className="mt-5 flex items-center gap-3">
                 {[Facebook, Twitter, Instagram, Youtube].map((Ic, i) => (
-                  <a key={i} href="#" className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#ff8a1f] grid place-items-center transition-colors">
+                  <a
+                    key={i}
+                    href="#"
+                    className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#ff8a1f] grid place-items-center transition-colors"
+                  >
                     <Ic className="w-4 h-4" />
                   </a>
                 ))}
-              </div>
+              </div> 
             </div>
-          </div>
+          </div>*/}
         </div>
       </div>
     </section>
   );
 }
+
+export default Engagement;
 
 function Footer() {
   return (
@@ -717,7 +1158,7 @@ function Footer() {
           <div className="flex items-center gap-3 mb-5">
             <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#ff8a1f] to-[#0b8a4a] grid place-items-center font-bold">JR</div>
             <div>
-              <div className="text-lg font-semibold" style={{ fontFamily: "Playfair Display, serif" }}>Jaya Prakash Reddy</div>
+              <div className="text-lg font-semibold" style={{ fontFamily: "Playfair Display, serif" }}>Turupu Jaya Prakash Reddy</div>
               <div className="text-xs text-white/50 uppercase tracking-[0.2em]">Jagga Reddy · Public Servant</div>
             </div>
           </div>
@@ -726,8 +1167,19 @@ function Footer() {
             wisdom and dignity of its people.
           </p>
           <div className="mt-6 flex items-center gap-3">
-            {[Facebook, Twitter, Instagram, Youtube].map((Ic, i) => (
-              <a key={i} href="#" className="w-10 h-10 rounded-full border border-white/15 hover:border-[#ff8a1f] hover:text-[#ff8a1f] grid place-items-center transition-colors">
+            {[
+              { icon: Facebook, url: "https://www.facebook.com/jagga.reddy.3152/" },
+              { icon: Twitter, url: "https://x.com/ImJaggaReddy?lang=en" },
+              { icon: Instagram, url: "https://www.instagram.com/imjaggareddy/" },
+              { icon: Youtube, url: "https://www.youtube.com/@JaggaReddyOfficial" },
+            ].map(({ icon: Ic, url }, i) => (
+              <a
+                key={i}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-white/15 hover:border-[#ff8a1f] hover:text-[#ff8a1f] grid place-items-center transition-colors"
+              >
                 <Ic className="w-4 h-4" />
               </a>
             ))}
@@ -752,7 +1204,7 @@ function Footer() {
       </div>
       <div className="mt-16 pt-8 border-t border-white/10 max-w-7xl mx-auto px-5 lg:px-10 flex flex-wrap items-center justify-between gap-4 text-xs text-white/40">
         <span>© {new Date().getFullYear()} Sri Jaya Prakash Reddy. All rights reserved.</span>
-        <span>Designed for the people, with the people.</span>
+        <span>Desinged by TechMecha Torque</span>
       </div>
     </footer>
   );
