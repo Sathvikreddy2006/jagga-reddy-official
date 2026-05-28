@@ -271,7 +271,7 @@ function SectionHeader({
 
 function Biography() {
   const blocks = [
-    { icon: Sparkles, t: "Initial days of Life", d: "Born on 7 July 1966 in Indrakaran, Medak district, India, he has dedicated decades of his life to public service and leadership, earning recognition for his commitment to the people and the region" },
+    { icon: Sparkles, t: "Early Life", d: "Born on 7 July 1966 in Indrakaran, Medak district, India, he has dedicated decades of his life to public service and leadership, earning recognition for his commitment to the people and the region" },
     { icon: GraduationCap, t: "Education", d: "Completed his secondary education in 1982." },
     { icon: Compass, t: "Political Vision", d: "Believes in an inclusive India where opportunity is universal — strengthening farmers, supporting small businesses, and elevating women and youth into leadership." },
     { icon: Flag, t: "Leadership Philosophy", d: "Leads by listening. Decisions are made closest to the people they affect, rooted in transparency, accountability and tireless on-the-ground presence." },
