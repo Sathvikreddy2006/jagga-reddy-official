@@ -10,6 +10,7 @@ import { useTranslation } from "react-i18next";
 import "./-i18n"; // ← initialises i18next once
 
 import portrait from "@/assets/jagga-reddy-portrait.jpg";
+import portrait2 from "@/assets/jagga-reddy-portrait-2.jpg";
 
 export const Route = createFileRoute("/")({ component: Index });
 
@@ -366,7 +367,7 @@ function Biography() {
           <div className="lg:col-span-5 reveal">
             <div className="relative">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl ring-1 ring-black/5">
-                <img src={g} alt="Connecting with villagers" className="w-full h-full object-cover" loading="lazy" />
+                <img src={portrait2} alt="Connecting with villagers" className="w-full h-full object-cover" loading="lazy" />
               </div>
               <div className="absolute -bottom-6 -right-6 hidden md:block bg-white border border-neutral-200 rounded-2xl p-5 shadow-xl max-w-[240px]">
                 <Quote className="w-5 h-5 text-[#e8721a]" />
