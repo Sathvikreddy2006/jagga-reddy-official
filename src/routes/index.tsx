@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 import "./-i18n"; // ← initialises i18next once
 
 import portrait from "@/assets/jagga-reddy-portrait.jpg";
-import portrait2 from "@/assets/jagga-reddy-portrait-2.jpg";
+import portrait2 from "@/assets/jagga-reddy-portrait-2.jpeg";
 
 export const Route = createFileRoute("/")({ component: Index });
 
@@ -467,7 +467,7 @@ import cyclesPoster from "@/assets/cycle.jpeg";
 import kjs from "@/assets/videos/kjs.mp4";
 import kjsPoster from "@/assets/kjs.jpeg";
 import devotion from "@/assets/videos/devotion.mp4";
-import devotionPoster from "@/assets/devotion.jpeg";
+import devotionPoster from "@/assets/devotion.jpg";
 import dargah from "@/assets/videos/dargah.mp4";
 import dargahPoster from "@/assets/dargah.jpeg";
 import delimitation from "@/assets/videos/delimitation.mp4";
@@ -740,17 +740,17 @@ function Media() {
 }
 
 // ─── Gallery image imports ────────────────────────────────────────────────────
-import a from "@/assets/gallery/1.jpg";
-import b from "@/assets/gallery/2.jpg";
-import c from "@/assets/gallery/3.jpg";
-import d from "@/assets/gallery/4.jpg";
-import e from "@/assets/gallery/5.jpg";
-import f from "@/assets/gallery/6.jpg";
-import g from "@/assets/gallery/7.jpg";
-import h from "@/assets/gallery/8.jpg";
-import i from "@/assets/gallery/9.jpg";
-import j from "@/assets/gallery/10.jpg";
-import k from "@/assets/gallery/11.jpg";
+import a from "@/assets/gallery/1.jpeg";
+import b from "@/assets/gallery/2.jpeg";
+import c from "@/assets/gallery/3.jpeg";
+import d from "@/assets/gallery/4.jpeg";
+import e from "@/assets/gallery/5.jpeg";
+import f from "@/assets/gallery/6.jpeg";
+import g from "@/assets/gallery/7.jpeg";
+import h from "@/assets/gallery/8.jpeg";
+import i from "@/assets/gallery/9.jpeg";
+import j from "@/assets/gallery/10.jpeg";
+import k from "@/assets/gallery/11.jpeg";
 
 // ─── Gallery ──────────────────────────────────────────────────────────────────
 function Gallery() {
